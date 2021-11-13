@@ -85,10 +85,10 @@
     </div>
     <div id="avali">
         <p id="avaliacao"><strong>Escreva sua avaliação:</strong></p>
-        <form action="" method="">
-            <textarea cols="40" rows="5" class="ava" placeholder="Avaliação:"></textarea>
+        <form action="avaliar.php?id_produto=6" method="POST">
+            <textarea cols="40" rows="5" class="ava" placeholder="Avaliação:" name="avaliacao"></textarea>
             <br>
-            <input type="text" placeholder="Seu Nome:" class="ava">
+            <input type="text" placeholder="Seu Nome:" class="ava"  value="value fixo">
             <br>
             <button type="submit" id="botao" class="botao_ava">Enviar</button>
         </form>

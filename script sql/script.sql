@@ -4,17 +4,23 @@ CREATE TABLE produto (
     descricao varchar(255) NOT NULL,
     preco decimal(4, 2) NOT NULL,
     imagem varchar(200),
+    categoria int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (categoria) REFERENCES categoria (id) ON
+    DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO usuario (titulo, descricao, preco, categoria) values ('Croppeds trançados diversas cores', 'Blusa feminina modelo cropped, confeccionada com detalhe trançado na parte frontal. Com acabamento e costura no tom.', '39.99', '1');
+
+CREATE TABLE categoria (
+    id int NOT NULL AUTO_INCREMENT,
+    categoria varchar(255) NOT NULL,
     PRIMARY KEY (id)
 );
 
-/*CREATE TABLE categoria (
-    id int NOT NULL AUTO_INCREMENT,
-    id_produto varchar(255) NOT NULL,
-    categoria varchar(255) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (id) REFERENCES produto (id) ON
-    DELETE CASCADE ON UPDATE CASCADE
-);*/
+INSERT INTO categoria (categoria) values ('blusas');
+INSERT INTO categoria (categoria) values ('vestidos');
+INSERT INTO categoria (categoria) values ('calças/shorts');
 
 CREATE TABLE administrador (
     id int NOT NULL AUTO_INCREMENT,
@@ -36,6 +42,8 @@ create table usuario (
     PRIMARY KEY (id)
 );
 
+INSERT INTO usuario (nome, email, cpf, data_nascimento, sexo, telefone, senha, endereco) values ('teste', 'teste@teste.com', '00000000000', '00/00/0000', 'fem', '000000000000', 'teste123', 'teste teste teste 123');
+
 create table estoque (
     id int NOT NULL AUTO_INCREMENT,
     id_produto int NOT NULL,
@@ -54,11 +62,17 @@ create table estoque (
     DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO usuario (id_produto, tam_P, tam_M, tam_G, tam_GG, tam_36, tam_38, tam_40, tam_42, tam_44, tam_46) values ('2', '9', '10', '7', '13', NULL, NULL, NULL, NULL, NULL, NULL);
+UPDATE estoque SET tam_P = 3, tam_M = 5, tam_G = 2, tam_GG = 7, tam_36 = NULL, tam_38 = NULL, tam_40 = NULL, tam_42 = NULL, tam_44 = NULL, tam_46 = NULL WHERE id=1;
+
 create table avaliacao (
     id int NOT NULL AUTO_INCREMENT,
     id_usuario int NOT NULL,
+    id_produto int NOT NULL,
     avaliacao text NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (id_usuario) REFERENCES usuario(id) ON
+    DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_produto) REFERENCES produto(id) ON
     DELETE CASCADE ON UPDATE CASCADE
 );

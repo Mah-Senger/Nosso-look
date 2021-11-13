@@ -11,7 +11,7 @@ $comando = deletar("$id");
 $resultado = mysqli_query($conexao, $comando);
 
 if($resultado){
-    header('Location: administrador.html');
+    header('Location: administrador.php');
 }else{
     echo "deu errado!";
 }
