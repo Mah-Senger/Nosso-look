@@ -26,27 +26,29 @@
 
 
     <div id="cads">
-    <form action="pagina_inicial.html" method="">
-        <input type="text" placeholder="Seu Nome Completo:*" required class="campo_form">
+    <form action="resul_cadastre_se.php" method="post">
+        <input type="text" placeholder="Seu Nome Completo:*" name="nome" required class="campo_form">
         <br>
-        <input type="email" placeholder="Email:*" required class="campo_form">
+        <input type="email" placeholder="Email:*" name="email" required class="campo_form">
         <br>
-        <input type="text" data-ls-module="charCounter" maxlength="11" placeholder="CPF:*" required class="campo_form2">
+        <input type="text" data-ls-module="charCounter" maxlength="11" placeholder="CPF:*" name="cpf" required class="campo_form2">
         <br>
         <label for="data" class="datanasc_sexo">Data de Nascimento:*</label>
-        <input type="date" id="data" required class="campo_form3">
+        <input type="date" id="data" name="data_nascimento" required class="campo_form3">
         <br>
         <label class="datanasc_sexo">Sexo:</Sexo:></label>
-        <input type="radio" id="sexof" name="sexo">
+        <input type="radio" id="sexof" name="sexo" value="F">
         <label for="sexof" class="sexo_opc">Feminino</label>
-        <input type="radio" id="sexom" name="sexo">
+        <input type="radio" id="sexom" name="sexo" value="M">
         <label for="sexom" class="sexo_opc">Masculino</label>
         <br>
-        <input type="text" placeholder="Ex:015999999999" data-ls-module="charCounter" maxlength="12" class="campo_form2">
+        <input type="text" placeholder="Número de telefone" name="telefone" data-ls-module="charCounter" maxlength="12" class="campo_form2">
         <br>
-        <input type="password" placeholder="Informe uma senha*" class="campo_form" required>
+        <input type="text" placeholder="Endereço*: Rua, N°. Cidade-Estado" name="endereco" required class="campo_form">
         <br>
-        <input type="password" placeholder="Confirme sua senha*" class="campo_form" required>
+        <input type="password" placeholder="Informe uma senha*" name="senha" class="campo_form" required>
+        <br>
+        <input type="password" placeholder="Confirme sua senha*" name="conf_senha" class="campo_form" required>
         <br>
         <input type="checkbox" id="termos"required>
         <label for="termos">LI, COMPREENDI E CONCORDO COM AS CONDIÇÕES GERAIS*</label>
