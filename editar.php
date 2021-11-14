@@ -42,6 +42,7 @@
         </div>
         </div>
             <img src="roupas/blusa1.jpeg" id="img">
+
             <?php
                 $id = $_GET["id"];
 
@@ -76,10 +77,6 @@
                 $estoque["tam_44"] = $result_estoque["tam_44"];
                 $estoque["tam_46"] = $result_estoque["tam_46"];
 
-                $soma_estoque = 0;
-                foreach ($estoque as $posicao => $valor_posicao){
-                    $soma_estoque += $valor_posicao;
-                }
             ?>
      <div id="edicao"> 
     <h1>Editar produto</h1>
@@ -98,11 +95,24 @@
             <label for="preco"><h4>Preço:</h4></label>
             <input id="preco" name="preco" type="text" value="<?=$preco?>" class="input">
          </div>
+         <div class="elemento_form">
+         <h4 id="atencao">
+            Atenção: antes de colocar as quantidades disponíveis para cada tamanho no estoque, indique se os tamanhos irão do P ao GG 
+            ou do 36 ao 46, pois a seleção de forma inadequada acarretará na exclusão de certas quantidades indicadas no ato do cadastramento/edição do produto
+        </h4>
+         </div>
+         <div class="elemento_form">
+         <label for="numeracao">Intervalo de tamanho: </label><br>
+        <select name="numeracao" id="numeracao" class="input">
+            <option value="P-GG">P-GG</option>
+            <option value="36-46">36-46</option>
+        </select>
+         </div>
         <?php 
         foreach ($estoque as $posicao => $valor_posicao){
             echo "<div class='elemento_form'>";
             echo "<label for='estoque'><h4>$posicao</h4></label>";
-            echo "<input id='estoque' type='number'class='input' name= '$posicao' value='$valor_posicao'>";
+            echo "<input id='estoque' type='number'class='input' name= '$posicao' value='$valor_posicao'><br>";
             echo "</div>";
         }
         ?>

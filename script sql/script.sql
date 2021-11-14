@@ -10,7 +10,7 @@ CREATE TABLE produto (
     DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO usuario (titulo, descricao, preco, categoria) values ('Croppeds trançados diversas cores', 'Blusa feminina modelo cropped, confeccionada com detalhe trançado na parte frontal. Com acabamento e costura no tom.', '39.99', '1');
+INSERT INTO produto (titulo, descricao, preco, categoria) values ('Calça moletom feminino várias cores', 'Calça moletom ótima para os dias mais frios, possui modelagem mais justa e bolsos na parte da frente, com acabamento e costura no tom.', '79.99', '3');
 
 CREATE TABLE categoria (
     id int NOT NULL AUTO_INCREMENT,
@@ -62,8 +62,8 @@ create table estoque (
     DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO usuario (id_produto, tam_P, tam_M, tam_G, tam_GG, tam_36, tam_38, tam_40, tam_42, tam_44, tam_46) values ('2', '9', '10', '7', '13', NULL, NULL, NULL, NULL, NULL, NULL);
-UPDATE estoque SET tam_P = 3, tam_M = 5, tam_G = 2, tam_GG = 7, tam_36 = NULL, tam_38 = NULL, tam_40 = NULL, tam_42 = NULL, tam_44 = NULL, tam_46 = NULL WHERE id=1;
+INSERT INTO estoque (id_produto, tam_P, tam_M, tam_G, tam_GG, tam_36, tam_38, tam_40, tam_42, tam_44, tam_46) values ('6', '4', '4', '4', '4', NULL, NULL, NULL, NULL, NULL, NULL);
+UPDATE estoque SET tam_P = 3, tam_M = 5, tam_G = 2, tam_GG = 7, tam_36 = NULL, tam_38 = NULL, tam_40 = NULL, tam_42 = NULL, tam_44 = NULL, tam_46 = NULL WHERE id=5;
 
 create table avaliacao (
     id int NOT NULL AUTO_INCREMENT,
