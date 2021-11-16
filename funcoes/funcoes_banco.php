@@ -49,8 +49,18 @@ function selecionar_categorias(){
 
 
 // Funções do banco de dados - AVALIAÇÃO
-function avaliar($id, $avaliacao){
-    $comando = "INSERT INTO avaliacao (id_usuario, avaliacao) values ('$id', '$avaliacao')";
+function avaliar($id_usuario, $id_produto, $avaliacao){
+    $comando = "INSERT INTO avaliacao (id_usuario, id_produto, avaliacao) values ('$id_usuario', '$id_produto', '$avaliacao')";
+    return $comando;
+}
+
+function selecionar_avaliacao($id_produto){
+    $comando = "SELECT * FROM avaliacao WHERE id_produto = $id_produto";
+    return $comando;
+}
+
+function selecionar_usuario_avaliacao($id_usuario){
+    $comando = "SELECT * FROM usuario WHERE id = $id_usuario";
     return $comando;
 }
 
