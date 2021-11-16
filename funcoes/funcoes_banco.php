@@ -64,4 +64,5 @@ function selecionar_usuario_avaliacao($id_usuario){
     return $comando;
 }
 
+
 ?>
