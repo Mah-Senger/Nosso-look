@@ -64,5 +64,12 @@ function selecionar_usuario_avaliacao($id_usuario){
     return $comando;
 }
 
+//Funções do banco de dados - USUARIO
+function inserir_usuario($nome, $email, $cpf, $data_nascimento, $sexo, $telefone, $endereco, $senha){
+    $comando= "INSERT INTO usuario(nome,email,cpf,data_nascimento,sexo,telefone,endereco,senha) values ('$nome','$email','$cpf','$data_nascimento','$sexo','$telefone','$endereco','$senha')";
+    return $comando;
+}
+
+
 
 ?>
