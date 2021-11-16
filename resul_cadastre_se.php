@@ -28,8 +28,11 @@ $endereco=$_POST["endereco"];
 $senha=$_POST["senha"];
 $conf_senha=$_POST["conf_senha"];
 
-$conexao = mysqli_connect("localhost","root","","nossolook");
-$comando= "INSERT INTO usuario(nome,email,cpf,data_nascimento,sexo,telefone,endereco,senha) values ('$nome','$email','$cpf','$data_nascimento','$sexo','$telefone','$endereco','$senha')";
+require_once  "funcoes/conexao.php" ;
+require_once  "funcoes/funcoes_banco.php" ;
+
+$conexao = conexao ();
+$comando = inserir_usuario ($nome, $email, $cpf, $data_nascimento, $sexo, $telefone, $endereco, $senha);
 $resultado = mysqli_query($conexao, $comando);
 
 
