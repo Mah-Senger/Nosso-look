@@ -120,6 +120,14 @@
     margin-left: 20px;
 }
 
+#avaliacoes{
+    width: 200px;
+    display: flex;
+}
+#avaliacoes h4{
+    color: #ffb18b;
+}
+
 
 #novidds{
     font-size: 30px;
