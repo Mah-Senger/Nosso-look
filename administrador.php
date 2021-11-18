@@ -16,7 +16,7 @@
         </div>
     </div>
     <div id="menu">
-        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="index.html" class="opcoes_menu"><p>Home</p></a>
         <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
         <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
         <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
@@ -28,7 +28,7 @@
         <div id="cima">
             <h2>Alteração</h2>
             <div class="meio">
-            <a href="cadastrar.html" class="none"><p>Novo produto</p></a>
+            <a href="cadastrar.php" class="none"><p>Novo produto</p></a>
             <a href="" class="none"><p>Todos produtos</p></a>
             </div>
         </div>

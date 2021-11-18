@@ -28,8 +28,8 @@
             <div id="cima">
                 <h2>Alteração</h2>
                 <div class="meio">
-                <a href="cadastrar.html" class="none"><p>Novo produto</p></a>
-                <a href="administrador.html" class="none"><p>Todos produtos</p></a>
+                <a href="cadastrar.php" class="none"><p>Novo produto</p></a>
+                <a href="administrador.php" class="none"><p>Todos produtos</p></a>
                 </div>
             </div>
             <div id="baixo">

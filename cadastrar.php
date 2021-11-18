@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cadastrar.css"> 
+    <title>Cadastrar | Nosso Look</title>
+    <link rel="shortcut icon" href="logo_topo2.png">
+</head>
+<body>
+    <div id="cabecalho">
+        <div><img src="logo.jpg" alt="logo" id="logo"></div>
+        <div id="opcoes">
+            <a href="carrinho.html"><ion-icon name="cart-outline" title="Carrinho" class="icons"></ion-icon></a>
+            <a href="entrar_cadastre-se.html"><ion-icon name="person-circle-outline"  class="icons"></ion-icon></ion-icon></a>
+            <a href="n_pedido.html"><ion-icon name="cube-outline" class="icons"></ion-icon></ion-icon></a>
+        </div>
+    </div>
+    <div id="menu">
+        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="blusas.html" class="opcoes_menu">Blusas</a>
+        <a href="vestidos.html" class="opcoes_menu">Vestidos</a>
+        <a href="calcas.html" class="opcoes_menu">Calças e Shorts</a>
+        <a href="sobre.html" class="opcoes_menu">Sobre nós</a>
+    </div>
+    
+
+    <div id="tudo">
+        <div id="quadro">
+            <div id="cima">
+                <h2>Alteração</h2>
+                <div class="meio">
+                <a href="cadastrar.php" class="none">Novo produto</a>
+                <a href="administrador.php" class="none">Todos produtos</a>
+                </div>
+            </div>
+            <div id="baixo">
+            <h2>Relatórios</h2>
+            <div class="meio">
+            <a href="" class="none">Relatório 1</a>
+            <a href="" class="none">Relatório 2</a>
+            <a href="" class="none">Relatório 3</a>
+            </div>
+        </div>
+        </div>
+        <div id="quest">
+            <h1>Cadastrar novo produto</h1>
+            <form action="resul_cadastrar_produto.php" method="POST">
+                
+            <div class="elementos_form">
+                <label for="descricao"><p>Titulo do Produto:</p></label>
+                <input id="descricao" type="text" class="input" name="titulo" placeholder="Ex: Saia jeans ..." required >
+            </div>
+
+            <div class="elementos_form">
+                <label for="preco"><p>Preço:</p></label>
+                <input id="preco" type="text" class="input" placeholder="Ex: 60,00" name="preco" required>
+            </div>
+
+            <div class="elementos_form">
+                <label for="ficha"><p>Descrição do produto:</p></label>
+                <textarea id="ficha" cols="50" rows="5" class="input" name="descricao"></textarea>
+            </div>
+               
+
+            <div class="elementos_form">
+                <label for="categoria"><p>Categoria:</p></label>
+            <select id="categoria" class="input" name="categoria" required>
+                <option >Blusas</option>
+                <option >Vestidos/saias</option>
+                <option >Calças/shorts</option>
+            </select>
+            </div>
+
+            <div class="elementos_form">
+                <label for="imagem"><p>Imagem do produto</p></label>
+                <input id="imagem" type="file" class="input" name="imagem" required>
+            </div>
+            
+            <br>
+            <button type="submit" id="bot"><p>Enviar</p></button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="rodape">
+        <div>
+        <p id="novidds">Fique por dentro das novidades!!</p>
+        <form action="" method="" id="form">
+            <input type="text" class="nome_email" placeholder="Nome">
+            <input type="email" class="nome_email" placeholder="Email">
+            <button type="submit" id="botao">Enviar</button>
+        </form>
+    </div>
+    <div id="redessociais">
+        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" class="sociais"></ion-icon></a>
+        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
+        <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
+        <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
+        <a href="administrador.html"><ion-icon name="options" class="sociais"></ion-icon></a>
+    </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html>
