@@ -16,7 +16,7 @@
         </div>
     </div>
     <div id="menu">
-        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
         <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
         <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
         <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
@@ -27,10 +27,10 @@
     <div id="pag">
     <div id="entrar">
         <p class="title">Entrar</p>
-        <form action="pagina_inicial.html" method="">
-            <input type="email" placeholder="Email:*" id="email" required>
+        <form action="processar_login_usuario.php" method="POST">
+            <input type="email" placeholder="Email:*" id="email" name="email" required>
             <br>
-            <input type="password" placeholder="Senha:*" id="senha" required>
+            <input type="password" placeholder="Senha:*" id="senha" name="senha" required>
             <br>
             <button id="botao1" type="submit"><strong>Entrar</strong></button>
         </form>

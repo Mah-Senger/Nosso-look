@@ -45,7 +45,7 @@
     padding-left: 100px;
     padding-top: 30px;
     width: 800px;
-    height: 600px;
+    height: 900px;
 }
 .campo_form{
     width: 700px;
@@ -74,6 +74,11 @@
 }
 .sexo_opc{
     font-size: 30px;
+}
+.atencao_end{
+    color: red;
+    font-size: 23px;
+    margin-top: -10px;
 }
 #botao_cads{
     background-color: white;
