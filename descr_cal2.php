@@ -15,16 +15,26 @@
     <div id="cabecalho">
         <div><img src="logo.jpg" alt="logo" id="logo"></div>
         <div id="opcoes">
-            <a href="carrinho.html"><ion-icon name="cart-outline" title="Carrinho" class="icons"></ion-icon></a>
-            <a href="entrar_cadastre-se.html"><ion-icon name="person-circle-outline"  class="icons"></ion-icon></a>
-            <a href="n_pedido.html"><ion-icon name="cube-outline" class="icons"></ion-icon></a>
+            <?php
+            session_start();
+
+            if(isset($_SESSION["nome_usuario"])){
+                echo "<a href='carrinho.html'><ion-icon name='cart-outline' title='Carrinho' class='icons'></ion-icon></a>";
+                echo "<a href='sair.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
+                echo "<a href='n_pedido.html'><ion-icon name='cube-outline' class='icons'></ion-icon></a>";
+            }else{
+                echo "<a href='entrar_cadastre-se.html'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
+            }
+
+            ?>
+            
         </div>
     </div>
     <div id="menu">
-        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
-        <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
-        <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
-        <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
+        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
+        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
+        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
+        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
         <a href="sobre.html" class="opcoes_menu"><p>Sobre nós</p></a>
     </div>
     <div id="produto">
@@ -49,22 +59,34 @@
                 <label for="quant" class="tm_cor">Quantidade:</label>
                 <select  id="quant">
                     <option>1</option>
-                   <option>2</option>
-                   <option>3</option>
-                   <option>4</option>
-                   <option>5</option>
-                   <option>6</option>
-                   <option>7</option>
-                   <option>8</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
                 </select>
             </form>
         </div>
         <div id="precos" class="precos">
             <p id="preco_atual">R$ 99,90</p>
-            <a href="carrinho.html" class="linkcomprar"><p class="comprar">Comprar</p></a>
+            <?php
+                if(isset($_SESSION["nome_usuario"])){
+                    echo "<a href='carrinho.html' class='linkcomprar'><p class='comprar'>Comprar</p></a>";
+                }else{
+                    echo "<a href='entrar_cadastre-se.html' class='linkcomprar'><p class='comprar'>Comprar</p></a>";
+                }
+            ?>
             <form action="" method="" id="cep">
                 <label for="cep">CEP:</label>
-                <input type="text" placeholder="Ex: 00000000" id="infcep" data-ls-module="charCounter" maxlength="8">
+                <?php
+                if(isset($_SESSION["endereco_usuario_cep"])){
+                    echo "<input type='text' placeholder='Ex: 00000000' value='" . $_SESSION["endereco_usuario_cep"] . "'id='infcep' data-ls-module='charCounter' maxlength='8'>";
+                }else{
+                    echo "<input type='text' placeholder='Ex: 00000000' id='infcep' data-ls-module='charCounter' maxlength='8'>";
+                }
+                ?>
                 <br>
                 <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm" id="nao_sei_cep">Não sei meu CEP </a>
             </form>
@@ -77,15 +99,26 @@
         <p class="textdesc">Calça Jeans feminina com barra dobrada.</p>
         <p class="textdesc">Calça Jeans feminina modelo justo e cintura alta, com acabamento e costura no tom.</p>
     </div>
+
+
     <div id="avali">
+    <?php
+       if(isset($_SESSION["nome_usuario"])){
+    ?>
         <p id="avaliacao"><strong>Escreva sua avaliação:</strong></p>
         <form action="avaliar.php?id_produto=6" method="POST">
             <textarea cols="40" rows="5" class="ava" placeholder="Avaliação:" name="avaliacao"></textarea>
             <br>
-            <input type="text" placeholder="Seu Nome:" class="ava"  value="value fixo">
+            <input type="text" placeholder="Seu Nome:" class="ava"  value="<?=$_SESSION['nome_usuario']?>">
             <br>
             <button type="submit" id="botao" class="botao_ava">Enviar</button>
         </form>
+
+        <?php 
+        }else{
+            echo "<h2 id='titulo_avaliacao'>Avaliações</h2>";
+        }
+        ?>
 
         <?php
             $id_produto = $_GET["id_produto"];

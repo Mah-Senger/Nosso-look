@@ -1,7 +1,7 @@
 <?php
-
+session_start();
 //valor fixo temporariamente, até que exista a $_SESSION do usuario
-$id_usuario = "1";
+$id_usuario = $_SESSION["id_usuario"];
 $id_produto = $_GET["id_produto"];
 $avaliacao = $_POST["avaliacao"];
 

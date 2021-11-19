@@ -43,8 +43,9 @@ function selecionar_estoque($id){
 
 
 // Funções do banco de dados - CATEGORIA
-function selecionar_categorias(){
-
+function selecionar_categorias($id){
+    $comando = "SELECT * FROM produto WHERE categoria = $id";
+    return $comando;
 }
 
 
@@ -64,12 +65,17 @@ function selecionar_usuario_avaliacao($id_usuario){
     return $comando;
 }
 
+
 //Funções do banco de dados - USUARIO
 function inserir_usuario($nome, $email, $cpf, $data_nascimento, $sexo, $telefone, $endereco, $senha){
     $comando= "INSERT INTO usuario(nome,email,cpf,data_nascimento,sexo,telefone,endereco,senha) values ('$nome','$email','$cpf','$data_nascimento','$sexo','$telefone','$endereco','$senha')";
     return $comando;
 }
 
+function login_usuario_email($email){
+    $comando= "SELECT * FROM usuario WHERE email = '$email' ";
+    return $comando;
+}
 
 
 ?>
