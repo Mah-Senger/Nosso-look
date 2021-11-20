@@ -71,6 +71,10 @@ function inserir_usuario($nome, $email, $cpf, $data_nascimento, $sexo, $telefone
     return $comando;
 }
 
-
+//Funções do banco de dados - ADMINISTRADOR
+function selecionar_admin($usuario_admin){
+    $comando = "SELECT * FROM administrador WHERE usuario = '$usuario_admin'";
+    return $comando;
+}
 
 ?>

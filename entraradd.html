@@ -1,3 +1,13 @@
+<?php
+session_start();
+   
+if(isset($_SESSION["usuario"])){
+    header("Location: administrador.php");
+}else{
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,7 +26,7 @@
         </div>
     </div>
     <div id="menu">
-        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="index.html" class="opcoes_menu"><p>Home</p></a>
         <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
         <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
         <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
@@ -27,15 +37,15 @@
            <div id="dentro">
             <h1>Entrar na administração</h1>
             <div id="form">
-                <form action="administrador.php">
+                <form action="resul_entraradd.php" method="post">
                     <div class="elem_form">
                         <label for="nome">Nome do administrador: </label>
-                        <input id="nome" type="text" class="input" required>
+                        <input id="nome" type="text" class="input" name="usuario" required>
                     </div>
     
                     <div class="elem_form">
                         <label for="cod">Código: </label>
-                        <input id="cod" type="password" class="input" required>
+                        <input id="cod" type="password" class="input" name="senha" required>
                     </div>
     
                     <div class="elem_form">
@@ -45,6 +55,7 @@
             </div>
            </div>
     </div>
+
 
 
 
@@ -68,3 +79,6 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 </html>
+<?php
+}
+?>

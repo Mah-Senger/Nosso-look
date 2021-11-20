@@ -110,7 +110,7 @@
         <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
         <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
         <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
-        <a href="administrador.html"><ion-icon name="options" class="sociais"></ion-icon></a>
+        <a href="sair_admin.php"><ion-icon name="exit-outline" class="sociais"></ion-icon></a>
     </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
