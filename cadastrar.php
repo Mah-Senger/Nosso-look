@@ -16,7 +16,7 @@
         </div>
     </div>
     <div id="menu">
-        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="pagina_inicial.html" class="opcoes_menu">Home</a>
         <a href="blusas.html" class="opcoes_menu">Blusas</a>
         <a href="vestidos.html" class="opcoes_menu">Vestidos</a>
         <a href="calcas.html" class="opcoes_menu">Calças e Shorts</a>
@@ -73,7 +73,7 @@
 
             <div class="elementos_form">
                 <label for="imagem"><p>Imagem do produto</p></label>
-                <input id="imagem" type="file" class="input" name="imagem" required>
+                <input id="imagem" type="file" class="input" name="imagem" >
             </div>
             
             <br>
