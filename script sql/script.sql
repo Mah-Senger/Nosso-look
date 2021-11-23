@@ -2,7 +2,7 @@ CREATE TABLE produto (
     id int NOT NULL AUTO_INCREMENT,
     titulo varchar(255) NOT NULL,
     descricao varchar(255) NOT NULL,
-    preco decimal(4, 2) NOT NULL,
+    preco decimal(6, 2) NOT NULL,
     imagem varchar(200),
     categoria int NOT NULL,
     PRIMARY KEY (id),

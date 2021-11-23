@@ -42,6 +42,20 @@
             </div>
         </div>
         </div>
+        <?php
+            $estoque = array();
+            $estoque["tam_P"] = "tam_P";
+            $estoque["tam_M"] = "tam_M";
+            $estoque["tam_G"] = "tam_G";
+            $estoque["tam_GG"] = "tam_GG";
+            $estoque["tam_36"] = "tam_36";
+            $estoque["tam_38"] = "tam_38";
+            $estoque["tam_40"] = "tam_40";
+            $estoque["tam_42"] = "tam_42";
+            $estoque["tam_44"] = "tam_44";
+            $estoque["tam_46"] = "tam_46";
+            
+        ?>
         <div id="quest">
             <h1>Cadastrar novo produto</h1>
             <form action="resul_cadastrar_produto.php" method="POST">
@@ -60,8 +74,27 @@
                 <label for="ficha"><p>Descrição do produto:</p></label>
                 <textarea id="ficha" cols="50" rows="5" class="input" name="descricao"></textarea>
             </div>
-               
-
+            <div class="elementos_form">
+                <h4 id="atencao">
+                    Atenção: antes de colocar as quantidades disponíveis para cada tamanho no estoque, indique se os tamanhos irão do P ao GG 
+                    ou do 36 ao 46, pois a seleção de forma inadequada acarretará na exclusão de certas quantidades indicadas no ato do cadastramento/edição do produto
+                </h4>
+            </div>
+            <div class="elementos_form">
+                <label for="numeracao">Intervalo de tamanho: </label><br>
+                <select name="numeracao" id="numeracao" class="input">
+                    <option value="P-GG">P-GG</option>
+                    <option value="36-46">36-46</option>
+                </select>
+            </div>
+            <?php 
+                foreach ($estoque as $posicao => $valor_posicao){
+                    echo "<div class='elementos_form'>";
+                    echo "<label for='estoque'><h4>$posicao</h4></label>";
+                    echo "<input id='estoque' type='number'class='input' name= '$posicao'><br>";
+                    echo "</div>";
+                }
+            ?>
             <div class="elementos_form">
                 <label for="categoria"><p>Categoria:</p></label>
             <select id="categoria" class="input" name="categoria" required>

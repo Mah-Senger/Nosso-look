@@ -42,6 +42,11 @@ function selecionar_estoque($id){
     return $comando;
 }
 
+function inserir_estoque($id, $tam_P, $tam_M, $tam_G, $tam_GG, $tam_36, $tam_38, $tam_40, $tam_42, $tam_44, $tam_46){
+    $comando = "INSERT INTO estoque (id_produto, tam_P, tam_M, tam_G, tam_GG, tam_36, tam_38, tam_40, tam_42, tam_44, tam_46) values ('$id', '$tam_P', '$tam_M', '$tam_G', '$tam_GG', '$tam_36', '$tam_38', '$tam_40', '$tam_42', '$tam_44', '$tam_46')";
+    return $comando;
+}
+
 
 // Funções do banco de dados - CATEGORIA
 function selecionar_categorias(){

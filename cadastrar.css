@@ -78,7 +78,10 @@ p{
 .input{
     border: solid 3px #ffb18b;
 }
+#atencao{
+    width: 400px;
 
+}
 
 #rodape{
     display: flex;

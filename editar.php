@@ -64,7 +64,7 @@
 
                 $retorno = mysqli_query($conexao, $comando_estoque);
                 $result_estoque = mysqli_fetch_assoc($retorno);
-
+ 
                 $estoque = array();
                 $estoque["tam_P"] = $result_estoque["tam_P"];
                 $estoque["tam_M"] = $result_estoque["tam_M"];
