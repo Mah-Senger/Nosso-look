@@ -58,7 +58,7 @@
         ?>
         <div id="quest">
             <h1>Cadastrar novo produto</h1>
-            <form action="resul_cadastrar_produto.php" method="POST">
+            <form action="resul_cadastrar_produto.php" method="POST" enctype="multipart/form-data">
                 
             <div class="elementos_form">
                 <label for="descricao"><p>Titulo do Produto:</p></label>

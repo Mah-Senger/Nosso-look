@@ -40,11 +40,19 @@ if($numeracao == "P-GG"){
     $tam_GG = 0;
 }
 
+if($_FILES['imagem']['size'] == 0){
+    $imagem = "sem_foto.png";
+}else{
+    $extensao = strtolower(end(explode( ".", $_FILES['imagem']["name"])));//pega a extensao do arquivo
+    $imagem = md5(time()) . "." . $extensao; //define o nome do arquivo
+    move_uploaded_file($_FILES['imagem']['tmp_name'], "roupas/" . $imagem); //efetua o upload
+}
+
 require_once  "funcoes/conexao.php" ;
 require_once  "funcoes/funcoes_banco.php" ;
 
 $conexao = conexao();
-$comando = inserir_produto($titulo, $preco, $descricao, $categoria);
+$comando = inserir_produto($titulo, $preco, $descricao, $imagem, $categoria);
 $resultado = mysqli_query($conexao, $comando);
 
 if($resultado == true ){

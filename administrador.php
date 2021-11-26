@@ -83,7 +83,7 @@
 
         ?>
         <ul class="lista">
-            <div class="produto"> <li><div class="lado"><img src="roupas/blusa1.jpeg">
+        <div class="produto"> <li><div class="lado"><img src='roupas\<?=$resultado["imagem"]?>' alt="<?=$resultado["titulo"]?>">
             <h3><a href="pag_blusa1.html" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
             <div class="quant"><li class="quantidade"><?=$soma_estoque?></li></div>
             <div class="preço"><li><?=$resultado["preco"]?></li></div>
