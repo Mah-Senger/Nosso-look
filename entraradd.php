@@ -21,7 +21,7 @@ if(!isset($_SESSION["usuario_admin"])){
         </div>
     </div>
     <div id="menu">
-        <a href="index.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
         <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
         <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
         <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
