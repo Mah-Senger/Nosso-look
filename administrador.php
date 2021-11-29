@@ -38,7 +38,7 @@
         <div id="cima">
             <h2>Alteração</h2>
             <div class="meio">
-            <a href="cadastrar.html" class="none"><p>Novo produto</p></a>
+            <a href="cadastrar.php" class="none"><p>Novo produto</p></a>
             <a href="" class="none"><p>Todos produtos</p></a>
             </div>
         </div>
@@ -93,7 +93,7 @@
 
         ?>
         <ul class="lista">
-            <div class="produto"> <li><div class="lado"><img src="roupas/blusa1.jpeg">
+        <div class="produto"> <li><div class="lado"><img src='roupas\<?=$resultado["imagem"]?>' alt="<?=$resultado["titulo"]?>">
             <h3><a href="pag_blusa1.html" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
             <div class="quant"><li class="quantidade"><?=$soma_estoque?></li></div>
             <div class="preço"><li><?=$resultado["preco"]?></li></div>
@@ -120,7 +120,7 @@
         <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
         <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
         <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
-        <a href="administrador.html"><ion-icon name="options" class="sociais"></ion-icon></a>
+        <a href="sair_admin.php"><ion-icon name="options" class="sociais"></ion-icon></a>
     </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
